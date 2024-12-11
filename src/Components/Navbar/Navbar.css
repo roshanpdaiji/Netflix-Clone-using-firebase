@@ -1,0 +1,78 @@
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  transition: background-color 0.3s ease-in-out; /* Smooth transition */
+  background-color: transparent; /* Initial transparent background */
+}
+
+.nav-dark {
+  background-color: #141414; /* Dark background on scroll */
+}
+
+/* Netflix logo */
+.netflix-logo {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+  color: #e50914; /* Netflix red */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-right: 30px;
+}
+
+/* Left-side menu */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-left ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.navbar-left ul li {
+  color: white;
+  cursor: pointer;
+}
+
+/* Right-side menu */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.navbar-profile {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.navbar-profile img {
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.navbar-profile .dropdown {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background-color: #191919;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+.navbar-profile:hover .dropdown {
+  display: block;
+}

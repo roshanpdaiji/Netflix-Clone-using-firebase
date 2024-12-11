@@ -1,0 +1,69 @@
+/* Main container for the player */
+.player {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Start from the top */
+  height: 100vh; /* Full viewport height */
+  background-color: #141414; /* Netflix-style dark background */
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Back Arrow Icon */
+.back-arrow {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 2rem;
+  color: red;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.back-arrow:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Embedded YouTube video */
+.video-frame {
+  position: relative;
+  top: 100px; /* Positioned 100px from the top */
+  width: 100%; /* 80% width */
+  height: 60%; /* 80% height */
+  max-width: 800px; /* Maximum width for large screens */
+  aspect-ratio: 1; /* Ensures square aspect ratio */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+/* Player info section */
+.player-info {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.player-info p {
+  margin: 5px 0;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .player {
+    padding: 10px;
+  }
+
+  .video-frame {
+    width: 100%; /* Full width for smaller screens */
+    height: auto; /* Adjust height automatically */
+  }
+
+  .player-info {
+    font-size: 14px;
+  }
+}
